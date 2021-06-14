@@ -1,0 +1,31 @@
+
+
+.heading {
+    font-weight: 700;
+
+    &__primary {
+        font-size: 4rem;
+        letter-spacing: 0.1rem;
+
+        &--white {
+            color: var(--color-vary-light-gray);
+        }
+    }
+
+    &__secondary {
+        font-size: 3rem;
+        
+        &--white {
+            color: var(--color-vary-light-gray);
+        }
+    }
+
+    &__quad {
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+
+        @include respond(tab) {
+            font-size: 2rem;
+        }
+    }
+}

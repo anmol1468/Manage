@@ -1,0 +1,90 @@
+
+.section-header {
+    background-color: var(--color-vary-light-gray);
+
+
+    .header-main {
+        padding-top: 4rem;
+
+        &__text {
+            width: 80%;
+
+            @include respond(tab) {
+                grid-row-start: 2;
+                width: 80%;
+                margin: auto;
+                text-align: center;
+            }
+            
+        }
+    }
+}
+
+.section-features {
+    background-color: var(--color-vary-light-gray);
+    padding: 7rem 0;
+
+    @include respond(phone) {
+        padding-bottom: 0;
+    }
+
+    .text-box {
+        width: 80%;
+        align-self: flex-start;
+
+        @include respond(tab) {
+            margin: auto;
+            text-align: center;
+            width: 70%;
+            padding: 3rem;
+
+            h2 {
+                width: 70%;
+                margin: auto;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    .features-box {
+
+        @include respond(tab) {
+            padding: 3rem 0;
+        }
+    }
+}
+
+.section-reviews {
+    background-color: var(--color-vary-light-gray);
+    overflow: hidden;
+    padding-bottom: 7rem;
+}
+
+.section-orange {
+    background-color: var(--color-light-bright-red);
+    height: auto;
+
+    .grid-2-x {
+        height: 15rem;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(tab) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .btn {
+        float: right;
+    }
+}
+
+.footer {
+    color: var(--color-vary-light-gray);
+    height: auto;
+    background-color: var(--color-very-dark-blue);
+
+    @include respond(phone) {
+        padding-bottom: 2.5rem;
+    }
+}

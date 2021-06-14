@@ -1,0 +1,120 @@
+
+.container {
+    max-width: 105rem;
+    padding: 0 2rem;
+    margin: auto;
+}
+
+.align-center {
+    text-align: center;
+}
+
+
+//////////// margins and paddings
+
+.m-y-1 {
+    margin: 1rem 0;
+}
+.m-y-2 {
+    margin: 1.5rem 0;
+}
+.m-y-3 {
+    margin: 2rem 0;
+}
+.m-y-4 {
+    margin: 3rem 0;
+}
+.m-y-5 {
+    margin: 4rem 0;
+}
+
+.m-x-1 {
+    margin: 0 1rem;
+}
+.m-x-2 {
+    margin: 0 1.5rem;
+}
+.m-x-3 {
+    margin: 0 2rem;
+}
+.m-x-4 {
+    margin: 0 3rem;
+}
+.m-x-5 {
+    margin: 0 4rem;
+}
+
+
+.p-y-1 {
+    padding: 1rem 0;
+}
+.p-y-2 {
+    padding: 1.5rem 0;
+}
+.p-y-3 {
+    padding: 2rem 0;
+}
+.p-y-4 {
+    padding: 3rem 0;
+}
+.p-y-5 {
+    padding: 4rem 0;
+}
+
+.p-x-1 {
+    padding: 0 1rem;
+}
+.p-x-2 {
+    padding: 0 1.5rem;
+}
+.p-x-3 {
+    padding: 0 2rem;
+}
+.p-x-4 {
+    padding: 0 3rem;
+}
+.p-x-5 {
+    padding: 0 4rem;
+}
+
+
+
+/////////// grid
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-2-x {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+
+    @include respond(tab) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 0;
+        align-self: flex-start;
+    }
+}
+
+.grid-2-x-2-y {
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 3fr;
+    gap: 2rem;
+}
+
+.grid-5-x {
+    height: 20rem;
+    grid-template-columns: 1fr 1fr 1fr 1.2fr;
+    grid-template-rows: 65% 35%;
+    height: 100%;
+    overflow: hidden;
+
+    @include respond(phone) {
+        height: 40rem;
+        grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}

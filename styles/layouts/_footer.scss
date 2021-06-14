@@ -1,0 +1,120 @@
+.footer {
+
+    &__logo {
+        grid-area: logo;
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: -1rem;
+
+        @include respond(phone) {
+            margin: 1rem 0 2rem 0;
+            font-size: 4rem;
+        }
+    }
+
+    &__social-links {
+        grid-area: social;
+
+        @include respond(phone) {
+            margin: 2rem 0;
+        }
+        
+        i {
+            font-size: 1.5rem;
+            margin: 0 .5rem;
+            transform: all 0.2s;
+
+            @include respond(phone) {
+                font-size: 3rem;
+                margin: 0 1rem;
+            }
+
+            &:hover {
+                color: var(--color-light-bright-red);
+            }
+        }
+    }
+
+    &__links-row-1,
+    &__links-row-2 {
+        display: flex;
+        flex-flow: column nowrap;
+
+        @include respond(phone) {
+            margin: 4rem 0 3rem 0;
+        }
+
+        a {
+            color: var(--color-very-pale-red);
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 0.7rem;
+            transition: all 0.2s;
+
+
+            &:hover {
+                color: var(--color-light-bright-red);
+            }
+        }
+    }
+
+    &__links-row-1 {
+        grid-area: links1;
+        padding-left: 2rem;
+    }
+    &__links-row-2 {
+        grid-area: links2;
+        padding-right: 2rem;
+    }
+    &__search {
+        grid-area: search;
+        display: flex;
+        flex-flow: row nowrap;
+
+        input {
+            padding: 1rem 2rem;
+            border-radius: 50rem;
+
+            @include respond(phone) {
+                margin-right: 1.5rem;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &__copyright {
+        grid-area: copyright;
+        display: inline;
+        float: right;
+
+        p {
+            color: var(--color-dark-grayish-blue);
+            text-align: right;
+        }
+        
+    }
+
+    .grid {
+        grid-template-areas: 
+        "logo links1 links2 search"
+        "social links1 links2 copyright";
+        justify-content: space-between;
+        padding-top: 4rem;
+        align-items: flex-start ;
+
+        @include respond(phone) {
+            grid-template-areas: 
+            "search search"
+            "links1 links2"
+            "links1 links2"
+            "social social"
+            "logo logo"
+            "copyright copyright";
+            justify-items: center;
+            align-items: center;
+        }
+    }
+}

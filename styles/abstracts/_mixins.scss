@@ -1,0 +1,21 @@
+
+//////////// media queries
+
+@mixin respond($breakpoint) {
+    
+    @if ($breakpoint == tab) {
+        @media (max-width: 56.25em) {@content}
+    };
+
+    @if ($breakpoint == phone) {
+        @media (max-width: 37.5em) {@content}
+    };
+
+    @if ($breakpoint == large-screen) {
+        @media (min-width: 70em) {@content}
+    };
+
+    @if ($breakpoint == over-700) {
+        @media (min-width: 44em) {@content}
+    };
+}
